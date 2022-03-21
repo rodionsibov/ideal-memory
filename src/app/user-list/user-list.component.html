@@ -2,6 +2,6 @@
 <button class="btn primary" (click)="addUser(box.value)">Add User</button>
 
 <div *ngFor="let user of users" class="list-item">
-    <div class="info">{{ user.name }} is {{ user.age }} years old</div>
+    <div class="info">{{ user.name }}</div>
     <button class="btn danger" (click)="removeUser(user.id)">Remove</button>
 </div>

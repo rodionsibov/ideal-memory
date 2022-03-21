@@ -10,17 +10,14 @@ export class UserListComponent implements OnInit {
     {
       id: '1',
       name: 'Jack',
-      age: 21
     },
     {
       id: '2',
       name: 'John',
-      age: 28
     },
     {
       id: '3',
       name: 'Sam',
-      age: 58
     }
   ]
 
@@ -39,12 +36,14 @@ export class UserListComponent implements OnInit {
 
   addUser(user: string): void {
     if (user) {
-      this.users.unshift({
-        id: (this.users.length + 1).toString(),
+      const uniqueId = Math.random().toString(16).slice(2)
+      const newUser = {
+        id: uniqueId,
         name: user,
-      })
+      }
+      this.users.unshift(newUser)
+      console.table(this.users);
     }
-    console.log(this.users);
 
   }
 
