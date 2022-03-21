@@ -3,13 +3,10 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-body {
-    padding: 50px;
-}
-
 .container {
-    margin: 0 auto;
+    margin: 50px auto;
     max-width: 800px;
+    padding-bottom: 50px;
 }
 
 .list-item {
@@ -56,7 +53,7 @@ body {
     opacity: 9;
     transform: scale(120%);
     transform-origin: left;
-    margin: 10px 0 30px;
+    margin: 10px 0 60px;
 }
 
 .btn:hover {
