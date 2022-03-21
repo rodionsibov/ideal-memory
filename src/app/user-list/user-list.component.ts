@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-  users = [
+  users: any[] = [
     {
       id: '1',
       name: 'Jack',
@@ -42,9 +42,10 @@ export class UserListComponent implements OnInit {
       this.users.unshift({
         id: (this.users.length + 1).toString(),
         name: user,
-        age: 33
       })
     }
+    console.log(this.users);
+
   }
 
 }
