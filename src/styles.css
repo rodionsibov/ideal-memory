@@ -5,6 +5,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 body {
     padding: 0 20px;
+    background-color: indigo;
 }
 
 .list-item {
@@ -22,7 +23,7 @@ body {
 
 .list-item:hover {
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-    transform: scale(105%);
+    transform: scale(102%);
 }
 
 .info {
@@ -47,8 +48,8 @@ body {
 }
 
 .primary {
-    background-color: dodgerblue;
-    opacity: 9;
+    background-color: green;
+    opacity: 1;
     transform: scale(120%);
     transform-origin: left;
     margin: 10px 0 60px;
@@ -63,7 +64,7 @@ body {
 input {
     padding: 10px;
     display: block;
-    border: 2px solid dodgerblue;
+    border: none;
     border-radius: 4px;
     width: 100%;
     box-sizing: border-box;
