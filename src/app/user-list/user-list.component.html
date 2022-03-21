@@ -1,1 +1,7 @@
-<p>user-list works!</p>
+<input #box type="text" (keyup.enter)="addUser(box.value); box.value=''" (blur)="addUser(box.value); box.value=''">
+<button class="btn primary" (click)="addUser(box.value)">Add User</button>
+
+<div *ngFor="let user of users" class="list-item">
+    <div class="info">{{ user.name }} is {{ user.age }} years old</div>
+    <button class="btn danger" (click)="removeUser(user.id)">Remove</button>
+</div>

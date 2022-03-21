@@ -2,3 +2,70 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+    padding: 50px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 4px;
+    transition: 0.2s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    word-break: break-all;
+}
+
+.list-item:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    transform: scale(105%);
+}
+
+.info {
+    padding-right: 20px;
+}
+
+.btn {
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.2s ease;
+    cursor: pointer;
+    opacity: 0.4;
+    flex-shrink: 0;
+}
+
+.danger {
+    background-color: tomato;
+    border: 2px solid red;
+}
+
+.primary {
+    background-color: dodgerblue;
+    opacity: 9;
+    transform: scale(120%);
+    transform-origin: left;
+    margin: 10px 0 30px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+
+input {
+    padding: 10px;
+    display: block;
+    border: 2px solid dodgerblue;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
