@@ -83,16 +83,11 @@ dialog {
     max-width: 50ch;
     border-radius: 10px;
     border: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
-    z-index: 1000;
 }
 
 dialog::backdrop {
-    background: purple;
+    background: linear-gradient(45deg, red, blue);
     opacity: 0.5;
 }
 

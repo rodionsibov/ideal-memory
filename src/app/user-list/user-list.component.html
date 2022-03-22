@@ -8,8 +8,8 @@
 </div>
 
 <dialog #modal>
-    <h2>Edit {{ userEdit }}</h2>
-    <input type="text" [value]="userEdit" (keyup.enter)="userEdit = userEditInput.value" #userEditInput>
+    <h2>Edit User</h2>
+    <input type="text">
     <div class="buttons">
         <button class="btn bg-gray" (click)="closeModal(modal, $event)">Cancel</button>
         <button class="btn bg-blue" (click)="closeModal(modal, $event)">Save</button>

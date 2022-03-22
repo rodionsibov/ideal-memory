@@ -22,8 +22,7 @@ export class UserListComponent implements OnInit {
   ]
 
 
-  userEdit: string = ''
-
+userEditId: string = ''
   // arr = Array.from({ length: 10 }, (_, i) => i + 1)
 
   constructor() { }
@@ -51,10 +50,17 @@ export class UserListComponent implements OnInit {
 
   }
 
+  showUser() {
+    const user = this.users.find(user => user.id === this.userEditId)
+    console.log(user.name);
+    return user.name
+  }
+
   openModal(modal: any, user: any): void {
     modal.showModal()
-    console.log(user);
-    this.userEdit = user.name
+    this.userEditId = user.id
+    console.log(this.userEditId);
+    
   }
 
   closeModal(modal: any, event: any): void {
@@ -64,6 +70,7 @@ export class UserListComponent implements OnInit {
 
     } else {
       modal.close()
+      console.log(this.users);
       console.log('Saved');
     }
   }
