@@ -2,6 +2,16 @@
 <button class="btn primary" (click)="addUser(box.value)">Add User</button>
 
 <div *ngFor="let user of users" class="list-item">
-    <div class="info">{{ user.name }}</div>
+    <div class="info" (click)="openModal(modal, user)">{{ user.name }}</div>
     <button class="btn danger" (click)="removeUser(user.id)">Remove</button>
+
 </div>
+
+<dialog #modal>
+    <h2>Edit {{ userEdit }}</h2>
+    <input type="text" [value]="userEdit" (keyup.enter)="userEdit = userEditInput.value" #userEditInput>
+    <div class="buttons">
+        <button class="btn bg-gray" (click)="closeModal(modal, $event)">Cancel</button>
+        <button class="btn bg-blue" (click)="closeModal(modal, $event)">Save</button>
+    </div>
+</dialog>

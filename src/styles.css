@@ -38,22 +38,29 @@ body {
     border-radius: 4px;
     transition: 0.2s ease;
     cursor: pointer;
-    opacity: 0.4;
     flex-shrink: 0;
 }
 
 .danger {
     background-color: tomato;
     border: 2px solid red;
+    opacity: 0.4;
 }
 
 .primary {
     background-color: green;
-    opacity: 1;
     transform: scale(120%);
     transform-origin: left;
     margin: 10px 0 60px;
     display: flex;
+}
+
+.bg-blue {
+    background-color: dodgerblue;
+}
+
+.bg-gray {
+    background-color: tomato;
 }
 
 .btn:hover {
@@ -69,5 +76,29 @@ input {
     width: 100%;
     box-sizing: border-box;
     font-size: 1.5rem;
+    border: 1px solid gray;
 }
 
+dialog {
+    max-width: 50ch;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+dialog::backdrop {
+    background: purple;
+    opacity: 0.5;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}

@@ -21,6 +21,9 @@ export class UserListComponent implements OnInit {
     }
   ]
 
+
+  userEdit: string = ''
+
   // arr = Array.from({ length: 10 }, (_, i) => i + 1)
 
   constructor() { }
@@ -29,8 +32,9 @@ export class UserListComponent implements OnInit {
   }
 
   removeUser(id: string): void {
-    this.users = this.users.filter(user => user.id !== id)
-    console.log('removeUser', id);
+    if (confirm('Are you sure, you want to delete this user?')) {
+      this.users = this.users.filter(user => user.id !== id)
+    }
 
   }
 
@@ -45,6 +49,23 @@ export class UserListComponent implements OnInit {
       console.table(this.users);
     }
 
+  }
+
+  openModal(modal: any, user: any): void {
+    modal.showModal()
+    console.log(user);
+    this.userEdit = user.name
+  }
+
+  closeModal(modal: any, event: any): void {
+    if (event.target.innerText === 'Cancel') {
+      modal.close()
+      console.log('Canceled');
+
+    } else {
+      modal.close()
+      console.log('Saved');
+    }
   }
 
 }
