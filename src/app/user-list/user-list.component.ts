@@ -21,8 +21,6 @@ export class UserListComponent implements OnInit {
     }
   ]
 
-
-userEditId: string = ''
   // arr = Array.from({ length: 10 }, (_, i) => i + 1)
 
   constructor() { }
@@ -50,16 +48,9 @@ userEditId: string = ''
 
   }
 
-  showUser() {
-    const user = this.users.find(user => user.id === this.userEditId)
-    console.log(user.name);
-    return user.name
-  }
-
   openModal(modal: any, user: any): void {
     modal.showModal()
-    this.userEditId = user.id
-    console.log(this.userEditId);
+    console.log(user.id);
     
   }
 
