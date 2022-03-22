@@ -3,7 +3,7 @@
 
 <div *ngFor="let user of users" class="list-item">
     <div class="info" (click)="openModal(modal, user)">{{ user.name }}</div>
-    <button class="btn danger" (click)="removeUser(user.id)">Remove</button>
+    <button class="btn danger" (click)="removeUser.emit(user.id)">Remove</button>
 
 </div>
 

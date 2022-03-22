@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-user-list',
@@ -6,34 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-  users: any[] = [
-    {
-      id: '1',
-      name: 'Jack',
-    },
-    {
-      id: '2',
-      name: 'John',
-    },
-    {
-      id: '3',
-      name: 'Sam',
-    }
-  ]
-
+  @Input() users: any
+  @Output() removeUser = new EventEmitter()
+  
   // arr = Array.from({ length: 10 }, (_, i) => i + 1)
 
   constructor() { }
 
   ngOnInit(): void {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.json())
+      .then(json => {
+        console.log(json)
+      })
   }
 
-  removeUser(id: string): void {
-    if (confirm('Are you sure, you want to delete this user?')) {
-      this.users = this.users.filter(user => user.id !== id)
-    }
 
-  }
 
   addUser(user: string): void {
     if (user) {
@@ -51,7 +39,7 @@ export class UserListComponent implements OnInit {
   openModal(modal: any, user: any): void {
     modal.showModal()
     console.log(user.id);
-    
+
   }
 
   closeModal(modal: any, event: any): void {

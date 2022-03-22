@@ -6,14 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  users: string[] = []
+  users: any[] = [
+    {
+      id: '1',
+      name: 'Jack',
+    },
+    {
+      id: '2',
+      name: 'John',
+    },
+    {
+      id: '3',
+      name: 'Sam',
+    }
+  ]
 
-  fetchUsers() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(json => {
-        console.log(json)
-        this.users = json
-      })
+  removeUser(id: string): void {
+    if (confirm('Are you sure, you want to delete this user?')) {
+      this.users = this.users.filter(user => user.id !== id)
+    }
+
   }
+ 
 }
