@@ -8,12 +8,14 @@ import { FooterComponent } from './footer/footer.component';
 import { RouteModule } from './route/route.module';
 import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     WelcomeComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
