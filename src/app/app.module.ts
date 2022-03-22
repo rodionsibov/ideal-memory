@@ -5,16 +5,22 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserListModule } from './user-list/user-list.module';
 import { FooterComponent } from './footer/footer.component';
+import { RouteModule } from './route/route.module';
+import { RouterModule } from '@angular/router';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    UserListModule
+    UserListModule,
+    RouteModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
