@@ -6,12 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  year: string = ''
   constructor() { }
 
   ngOnInit(): void {
-    this.year = new Date().getFullYear().toString()
-
   }
 
 }
