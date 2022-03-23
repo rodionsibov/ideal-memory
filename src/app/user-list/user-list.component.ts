@@ -8,7 +8,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class UserListComponent implements OnInit {
   @Input() users: any
   @Output() removeUser = new EventEmitter()
-  
+
+  errorMessage: string = ''
+
   // arr = Array.from({ length: 10 }, (_, i) => i + 1)
 
   constructor() { }
@@ -24,15 +26,20 @@ export class UserListComponent implements OnInit {
 
 
   addUser(user: string): void {
-    if (user) {
-      const uniqueId = Math.random().toString(16).slice(2)
-      const newUser = {
-        id: uniqueId,
-        name: user,
-      }
-      this.users.unshift(newUser)
-      console.table(this.users);
+    if (!user) {
+      this.errorMessage = 'The field is required'
+      return
     }
+
+    this.errorMessage = ''
+
+    const uniqueId = Math.random().toString(16).slice(2)
+    const newUser = {
+      id: uniqueId,
+      name: user,
+    }
+    this.users.unshift(newUser)
+    console.table(this.users);
 
   }
 

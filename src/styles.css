@@ -97,3 +97,12 @@ dialog::backdrop {
     align-items: center;
     margin-top: 10px;
 }
+
+.msg {
+    margin: 10px 0 20px;
+    font-size: small;
+}
+
+.error {
+    color: tomato;
+}
