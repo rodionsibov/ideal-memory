@@ -1,4 +1,5 @@
-<input #box type="text" (keyup.enter)="addUser(box.value); box.value=''" (blur)="addUser(box.value); box.value=''">
+<label for="box">User Name</label>
+<input #box id="box" type="text" (keyup.enter)="addUser(box.value); box.value=''" (blur)="addUser(box.value); box.value=''">
 <div *ngIf="errorMessage" class="msg error">{{ errorMessage }}</div>
 <button class="btn primary" (click)="addUser(box.value)">Add User</button>
 

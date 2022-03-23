@@ -106,3 +106,9 @@ dialog::backdrop {
 .error {
     color: tomato;
 }
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    color: white;
+}
