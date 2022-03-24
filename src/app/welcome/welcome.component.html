@@ -1,12 +1,8 @@
-<app-header></app-header>
-
 <mat-grid-list cols="4" rowHeight="200px" gutterSize="15">
     <mat-grid-tile *ngFor="let tile of tiles; let i = index" [colspan]="tile.cols" [rowspan]="tile.rows"
         [routerLink]="['product', i + 1]" [ngClass]="tile.class">
         <div class="box-text">{{tile.text}}</div>
     </mat-grid-tile>
-
 </mat-grid-list>
 
 <app-user-list [users]="users" (removeUser)="removeUser($event)"></app-user-list>
-<app-footer></app-footer>

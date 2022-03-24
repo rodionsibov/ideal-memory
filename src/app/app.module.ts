@@ -18,6 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { StoreInfoService } from './store-info.service';
 
 
 @NgModule({
@@ -41,7 +42,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatListModule,
     MatTooltipModule
   ],
-  providers: [],
+  providers: [StoreInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
