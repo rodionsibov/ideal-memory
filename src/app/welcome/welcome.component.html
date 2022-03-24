@@ -1,8 +1,9 @@
 <app-header></app-header>
 
 <mat-grid-list cols="4" rowHeight="400px" gutterSize="15">
-    <mat-grid-tile *ngFor="let tile of tiles; let i = index" [colspan]="tile.cols" [rowspan]="tile.rows" [ngClass]="tile.class">
-
+    <mat-grid-tile *ngFor="let tile of tiles; let i = index" [colspan]="tile.cols" [rowspan]="tile.rows"
+        [ngClass]="tile.class">
+        <div class="box-text">{{tile.text}}</div>
     </mat-grid-tile>
 
 </mat-grid-list>

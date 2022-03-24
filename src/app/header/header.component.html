@@ -1,9 +1,11 @@
-<h1 matTooltip="Info about the action">My App</h1>
+<h1>Angular app</h1>
+
+<span matTooltip="Info about the action" matTmatTooltipPosition="left">Tooltip</span>
 
 <button mat-button [matMenuTriggerFor]="menu">Menu</button>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
 </mat-menu>
 
 <button mat-button>Products</button>
