@@ -7,12 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   year: string = ''
+  joke: string = ''
 
   constructor() { }
 
   ngOnInit(): void {
     this.year = new Date().getFullYear().toString()
-    
+
+    fetch('https://api.chucknorris.io/jokes/random')
+      .then(response => response.json())
+      .then(json => {
+        this.joke = json.value
+
+      })
   }
 
 }

@@ -3,6 +3,14 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+:root {
+    --off-white: #fffff2;
+}
+
+body {
+    background-color: var(--off-white);
+}
+
 .list-item {
     display: flex;
     justify-content: space-between;
