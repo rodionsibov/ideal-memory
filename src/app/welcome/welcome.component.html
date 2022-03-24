@@ -1,3 +1,11 @@
 <app-header></app-header>
+
+<mat-grid-list cols="4" rowHeight="400px" gutterSize="15">
+    <mat-grid-tile *ngFor="let tile of tiles; let i = index" [colspan]="tile.cols" [rowspan]="tile.rows" [ngClass]="tile.class">
+
+    </mat-grid-tile>
+
+</mat-grid-list>
+
 <app-user-list [users]="users" (removeUser)="removeUser($event)"></app-user-list>
 <app-footer></app-footer>
