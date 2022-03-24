@@ -9,6 +9,7 @@ import { RouteModule } from './route/route.module';
 import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HeaderComponent } from './header/header.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HeaderComponent } from './header/header.component';
     FooterComponent,
     WelcomeComponent,
     HeaderComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,11 +3,6 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-body {
-    padding: 0 20px;
-    background-color: indigo;
-}
-
 .list-item {
     display: flex;
     justify-content: space-between;
