@@ -25,6 +25,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     padding-right: 20px;
 }
 
+.info:hover {
+    cursor: help
+}
+
 .btn {
     color: white;
     border: none;

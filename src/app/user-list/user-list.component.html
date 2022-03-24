@@ -4,7 +4,7 @@
 <button class="btn primary" (click)="addUser(box.value)">Add User</button>
 
 <div *ngFor="let user of users" class="list-item">
-    <div class="info" (click)="openModal(modal, user)">{{ user.name }}</div>
+    <div class="info" (click)="openModal(modal, user)" title="Click to Edit">{{ user.name }}</div>
     <button class="btn danger" (click)="removeUser.emit(user.id)">Remove</button>
 
 </div>
