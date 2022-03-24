@@ -1,15 +1,16 @@
 :host {
     display: block;
     padding-top: 20px;
+    margin-bottom: 10px;
 }
 
 ::selection {
-    background-color: deeppink;
+    background-color: gold;
 }
 
 h1 {
     margin: 20px 0;
-    color: white;
+    color: indigo;
     text-align: center;
 
 }
