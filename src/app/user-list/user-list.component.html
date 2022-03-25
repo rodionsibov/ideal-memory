@@ -4,7 +4,9 @@
 <button class="btn primary" style="margin-top: 20px;" (click)="addUser(box.value)">Add User</button>
 
 <div *ngFor="let user of users" class="list-item">
-    <div class="info" (click)="openModal(modal, user)" title="Click to Edit">{{ user.name }}</div>
+    <div class="info" (click)="openModal(modal, user)" title="Click to Edit">
+        {{ user.name }} {{ user.age }}
+    </div>
     <button class="btn danger" (click)="removeUser.emit(user.id)">Remove</button>
 
 </div>

@@ -11,8 +11,8 @@ export class UsersService {
     getUsers(): Observable<UserInterface[]> {
         return this.http.get<UserInterface[]>('http://localhost:3000/users').pipe(map((users: UserInterface[]) => {
             return users.map(user => ({
-                id:user.id,
-                name:user.name,
+                id: user.id,
+                name: user.name,
                 age: `${user.age} years old`
             }))
         }))
