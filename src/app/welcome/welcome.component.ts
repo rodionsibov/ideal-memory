@@ -1,7 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Tile } from '../models/tile';
 import { StoreInfoService } from '../store-info.service';
 import { UserInterface } from '../types/user.interface';
+import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-welcome',
@@ -10,38 +12,36 @@ import { UserInterface } from '../types/user.interface';
 })
 export class WelcomeComponent implements OnInit {
 
-  users: UserInterface[] = [
-    {
-      id: '1',
-      name: 'Jack',
-      age: 22
-    },
-    {
-      id: '2',
-      name: 'John',
-      age: 12
-    },
-    {
-      id: '3',
-      name: 'Sam',
-      age: 83
-    }
-  ]
+  users: UserInterface[] = []
 
   tiles: Tile[] = []
   errorMessage: string = ''
 
-  constructor(private storeInfo: StoreInfoService) { }
+  constructor(private storeInfo: StoreInfoService, private http: HttpClient, private usersService: UsersService) { }
 
   ngOnInit(): void {
     console.log(this.storeInfo);
     this.tiles = this.storeInfo.tiles
+
+    this.http.get('http://localhost:3000/users').subscribe((users: any) => {
+      console.log(users);
+      this.users = users
+    })
+
+    // fetch('http://localhost:3000/users')
+    //   .then(response => response.json())
+    //   .then(json => {
+    //     console.log(json)
+    //     this.users = json
+    //   })
+
+
   }
 
 
   removeUser(id: string): void {
     console.log('removeUser from parent', id);
-    
+
     if (confirm('Are you sure, you want to delete this user?')) {
       this.users = this.users.filter(user => user.id !== id)
     }

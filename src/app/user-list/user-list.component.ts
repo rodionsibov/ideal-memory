@@ -7,9 +7,9 @@ import { UserInterface } from '../types/user.interface';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-  @Input() users: UserInterface[]
-  @Output() removeUser = new EventEmitter()
-  @Output() addUserEvent = new EventEmitter()
+  @Input() users: UserInterface[] | undefined
+  @Output() removeUser = new EventEmitter<string>()
+  @Output() addUserEvent = new EventEmitter<string>()
 
   errorMessage: string = ''
 
@@ -18,11 +18,7 @@ export class UserListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(json => {
-        console.log(json)
-      })
+    
   }
 
 
