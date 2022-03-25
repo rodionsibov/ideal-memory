@@ -3,6 +3,7 @@
     margin: 30px auto 0;
     max-width: 600px;
     padding-bottom: 80px;
+    transform: scale(0.9);
 }
 
 label {

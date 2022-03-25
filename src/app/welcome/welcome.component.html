@@ -5,4 +5,4 @@
     </mat-grid-tile>
 </mat-grid-list>
 
-<app-user-list [users]="users" (removeUser)="removeUser($event)"></app-user-list>
+<app-user-list [users]="users" (removeUser)="removeUser($event)" (addUserEvent)="addUser($event)"></app-user-list>

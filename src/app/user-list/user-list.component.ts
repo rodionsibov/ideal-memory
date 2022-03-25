@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { UserInterface } from '../types/user.interface';
 
 @Component({
   selector: 'app-user-list',
@@ -6,8 +7,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-  @Input() users: any
+  @Input() users: UserInterface[]
   @Output() removeUser = new EventEmitter()
+  @Output() addUserEvent = new EventEmitter()
 
   errorMessage: string = ''
 
@@ -30,17 +32,8 @@ export class UserListComponent implements OnInit {
       this.errorMessage = 'The field is required'
       return
     }
-
     this.errorMessage = ''
-
-    const uniqueId = Math.random().toString(16).slice(2)
-    const newUser = {
-      id: uniqueId,
-      name: user,
-    }
-    this.users.unshift(newUser)
-    console.table(this.users);
-
+    this.addUserEvent.emit(user)
   }
 
   openModal(modal: any, user: any): void {
