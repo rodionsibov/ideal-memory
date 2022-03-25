@@ -1,10 +1,13 @@
 <h1>Angular app</h1>
 
 <button mat-button [matMenuTriggerFor]="menu" matTooltip="Info about the action">Menu</button>
-
 <mat-menu #menu="matMenu">
     <button mat-menu-item>Item 1</button>
     <button mat-menu-item>Item 2</button>
 </mat-menu>
 
-<button mat-button>Products</button>
+<button mat-button [routerLink]="['/']">Products</button>
+<button mat-button>About</button>
+<button mat-button>Blog</button>
+<button mat-button>Faq</button>
+<button mat-button>Contacts</button>
