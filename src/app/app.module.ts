@@ -22,8 +22,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { StoreInfoService } from './store-info.service';
 import { UsersService } from './users.service';
-
-
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +32,8 @@ import { UsersService } from './users.service';
     WelcomeComponent,
     HeaderComponent,
     ProductComponent,
+    RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,7 @@ import { UsersService } from './users.service';
     MatGridListModule,
     MatListModule,
     MatTooltipModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [StoreInfoService, UsersService],
   bootstrap: [AppComponent]
