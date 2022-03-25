@@ -17,7 +17,7 @@ export class WelcomeComponent implements OnInit {
   tiles: Tile[] = []
   errorMessage: string = ''
 
-  constructor(private storeInfo: StoreInfoService, private http: HttpClient, private usersService: UsersService) { }
+  constructor(private storeInfo: StoreInfoService, private usersService: UsersService) { }
 
   ngOnInit(): void {
     console.log('StoreInfo:', this.storeInfo);
@@ -45,7 +45,13 @@ export class WelcomeComponent implements OnInit {
     console.log('removeUser from parent', id);
 
     if (confirm('Are you sure, you want to delete this user?')) {
-      this.users = this.users.filter(user => user.id !== id)
+
+      this.usersService.removeUser(id).subscribe(() => {
+        console.log('delete from backend');
+
+        this.users = this.users.filter(user => user.id !== id)
+      })
+
     }
   }
 
@@ -57,13 +63,16 @@ export class WelcomeComponent implements OnInit {
       return
     }
     this.errorMessage = ''
-    const uniqueId = Math.random().toString(16).slice(2)
-    const newUser: UserInterface = {
-      id: uniqueId,
-      name,
-      age: 30,
-    }
-    this.users.unshift(newUser)
-    console.table(this.users);
+
+    // const uniqueId = Math.random().toString(16).slice(2)
+    // const newUser: UserInterface = {
+    //   id: uniqueId,
+    //   name,
+    //   age: 30,
+    // }
+    this.usersService.addUser(name).subscribe(newUser => {
+      console.log(newUser);
+      this.users.push(newUser)
+    })
   }
 }
