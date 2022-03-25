@@ -20,11 +20,13 @@ export class WelcomeComponent implements OnInit {
   constructor(private storeInfo: StoreInfoService, private http: HttpClient, private usersService: UsersService) { }
 
   ngOnInit(): void {
-    console.log(this.storeInfo);
+    console.log('StoreInfo:', this.storeInfo);
     this.tiles = this.storeInfo.tiles
 
-    this.http.get('http://localhost:3000/users').subscribe((users: any) => {
-      console.log(users);
+
+
+    this.usersService.getUsers().subscribe((users: UserInterface[]) => {
+      console.log('UsersService:', users);
       this.users = users
     })
 
