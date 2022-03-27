@@ -3,6 +3,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
+## Backend Setup
+
+For this project, you need both the fron-end and back-end running at the same time.
+
+### Launch the backend
+
+```
+npm run server
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
