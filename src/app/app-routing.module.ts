@@ -20,7 +20,7 @@ const routes: Routes = [
     component: EmployeeListComponent
   },
   {
-    path: '',
+    path: 'material-ui',
     component: MaterialUiComponent
   },
   {
@@ -28,7 +28,7 @@ const routes: Routes = [
     component: TaskTrackerComponent
   },
   {
-    path: 'welcome',
+    path: '',
     component: WelcomeComponent
   },
   {

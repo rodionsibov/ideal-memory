@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserListModule } from './user-list/user-list.module';
-import { MaterialModule } from './material-ui/material.module';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -14,13 +13,15 @@ import { HeaderComponent } from './header/header.component';
 import { ProductComponent } from './product/product.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { StoreModule } from '@ngrx/store';
+import { MaterialModule } from './material-ui/material.module';
 import { DepartmentListComponent } from './department-list/department-list.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { MaterialUiComponent } from './material-ui/material-ui.component';
+import { TaskTrackerComponent } from './task-tracker/task-tracker.component';
 
 import { StoreInfoService } from './store-info.service';
 import { UsersService } from './users.service';
-import { TaskTrackerComponent } from './task-tracker/task-tracker.component';
 
 @NgModule({
   declarations: [
@@ -40,11 +41,11 @@ import { TaskTrackerComponent } from './task-tracker/task-tracker.component';
     BrowserModule,
     BrowserAnimationsModule,
     UserListModule,
-    
     MatTooltipModule,
     AppRoutingModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [StoreInfoService, UsersService],
   bootstrap: [AppComponent]
