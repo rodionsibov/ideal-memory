@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { DepartmentListComponent } from './department-list/department-list.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { LoginComponent } from './login/login.component';
 import { MaterialUiComponent } from './material-ui/material-ui.component';
 import { ProductComponent } from './product/product.component';
 import { RegisterComponent } from './register/register.component';
-import { TasksComponent } from './tasks/tasks.component';
+import { TaskTrackerComponent } from './task-tracker/task-tracker.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
@@ -23,11 +24,11 @@ const routes: Routes = [
     component: MaterialUiComponent
   },
   {
-    path: 'tasks',
-    component: TasksComponent
+    path: 'task-tracker',
+    component: TaskTrackerComponent
   },
   {
-    path: '',
+    path: 'welcome',
     component: WelcomeComponent
   },
   {

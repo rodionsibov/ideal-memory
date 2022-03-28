@@ -3,12 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserListModule } from './user-list/user-list.module';
-import { MaterialModule } from './material.module';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatListModule } from '@angular/material/list';
+import { MaterialModule } from './material-ui/material.module';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -22,10 +17,10 @@ import { LoginComponent } from './login/login.component';
 import { DepartmentListComponent } from './department-list/department-list.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { MaterialUiComponent } from './material-ui/material-ui.component';
-import { TasksComponent } from './tasks/tasks.component';
 
 import { StoreInfoService } from './store-info.service';
 import { UsersService } from './users.service';
+import { TaskTrackerComponent } from './task-tracker/task-tracker.component';
 
 @NgModule({
   declarations: [
@@ -39,21 +34,15 @@ import { UsersService } from './users.service';
     DepartmentListComponent,
     EmployeeListComponent,
     MaterialUiComponent,
-    TasksComponent
+    TaskTrackerComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     UserListModule,
-    MatMenuModule,
-    MatButtonModule,
-    MatIconModule,
-    MatGridListModule,
-    MatListModule,
+    
     MatTooltipModule,
-    HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule
   ],

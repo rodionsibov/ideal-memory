@@ -1,21 +1,7 @@
-:host {
-    display: block;
-    padding: 10px 20px;
-    margin-bottom: 40px;
-}
-
 ::selection {
     background-color: gold;
 }
 
-h1 {
-    margin: 20px 0;
-    color: indigo;
+:host {
     text-align: center;
-
-}
-
-.menu-header {
-    display: flex;
-    justify-content: center;
 }
