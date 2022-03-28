@@ -1,0 +1,13 @@
+:host {
+    display: block;
+    padding: 1rem;
+}
+
+nav {
+    margin-bottom: 4rem;
+}
+
+span {
+    opacity: 0.5;
+    font-weight: lighter;
+}

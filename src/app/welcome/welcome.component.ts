@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Tile } from '../models/tile';
+import { Tile } from '../tile.interface';
 import { StoreInfoService } from '../store-info.service';
-import { UserInterface } from '../types/user.interface';
+import { UserInterface } from '../user.interface';
 import { UsersService } from '../users.service';
 
 @Component({
