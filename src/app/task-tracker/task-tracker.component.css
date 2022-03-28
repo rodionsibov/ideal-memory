@@ -1,0 +1,21 @@
+.tasks {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 2rem;
+    border: 2px solid orange;
+    border-radius: 1rem;
+}
+
+.task {
+    margin-bottom: 2rem;
+}
+
+.spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
