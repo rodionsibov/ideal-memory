@@ -1,12 +1,8 @@
-:host {
-    display: block;
-    margin: 30px auto 0;
-    max-width: 600px;
-    padding-bottom: 80px;
-    transform: scale(0.9);
-}
-
 label {
     color: black;
     opacity: 0.5;
+}
+
+.container {
+    padding: 4rem 0;
 }

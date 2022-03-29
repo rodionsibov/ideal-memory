@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserListModule } from './user-list/user-list.module';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -22,6 +21,7 @@ import { TaskTrackerComponent } from './task-tracker/task-tracker.component';
 
 import { StoreInfoService } from './store-info.service';
 import { UsersService } from './users.service';
+import { TaskService } from './task.service';
 
 @NgModule({
   declarations: [
@@ -41,13 +41,12 @@ import { UsersService } from './users.service';
     BrowserModule,
     BrowserAnimationsModule,
     UserListModule,
-    MatTooltipModule,
     AppRoutingModule,
     MaterialModule,
     HttpClientModule,
     StoreModule.forRoot({}, {})
   ],
-  providers: [StoreInfoService, UsersService],
+  providers: [StoreInfoService, UsersService, TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
