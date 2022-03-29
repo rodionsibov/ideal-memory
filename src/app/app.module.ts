@@ -10,8 +10,6 @@ import { FooterComponent } from './footer/footer.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductComponent } from './product/product.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
 import { StoreModule } from '@ngrx/store';
 import { MaterialModule } from './material-ui/material.module';
 import { DepartmentListComponent } from './department-list/department-list.component';
@@ -22,6 +20,7 @@ import { TaskTrackerComponent } from './task-tracker/task-tracker.component';
 import { StoreInfoService } from './store-info.service';
 import { UsersService } from './users.service';
 import { TaskService } from './task.service';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -30,8 +29,6 @@ import { TaskService } from './task.service';
     WelcomeComponent,
     HeaderComponent,
     ProductComponent,
-    RegisterComponent,
-    LoginComponent,
     DepartmentListComponent,
     EmployeeListComponent,
     MaterialUiComponent,
@@ -44,7 +41,8 @@ import { TaskService } from './task.service';
     AppRoutingModule,
     MaterialModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({}, {}),
+    AuthModule,
   ],
   providers: [StoreInfoService, UsersService, TaskService],
   bootstrap: [AppComponent]

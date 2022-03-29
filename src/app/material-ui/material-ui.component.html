@@ -115,8 +115,10 @@
 </mat-toolbar>
 
 <mat-divider></mat-divider>
-<mat-sidenav-container> 
-    <mat-sidenav #sidenav (opened)="log('Opened')" (closed)="log('Closed')" mode="side"></mat-sidenav>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav (opened)="log('Opened')" (closed)="log('Closed')" mode="side">
+        Sidenav
+    </mat-sidenav>
     <mat-sidenav-content>
         Main
         <button (click)="opened = !opened">Toggle Opened</button>
