@@ -23,6 +23,9 @@ export class RegisterComponent implements OnInit {
     })
   }
 
-  
+  onSubmit():void {
+    console.log('submit', this.form.value);
+    
+  }
 
 }
