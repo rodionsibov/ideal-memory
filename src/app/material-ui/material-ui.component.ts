@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MaterialUiComponent implements OnInit {
   notifications: number = 2
   showSpinner: boolean = false
+  opened: boolean = false
 
   constructor() { }
 
@@ -19,5 +20,9 @@ export class MaterialUiComponent implements OnInit {
     setTimeout(() => {
       this.showSpinner = false
     }, 5000)
+  }
+
+  log(data: string) {
+    console.log(data)
   }
 }

@@ -7,6 +7,7 @@ import { UserInterface } from "./user.interface";
 
 export class UsersService {
     private apiUrl: string = 'http://localhost:3000/customers'
+    
     constructor(private http: HttpClient) { }
 
     getUsers(): Observable<UserInterface[]> {
@@ -22,7 +23,7 @@ export class UsersService {
     }
 
     removeUser(id: string): Observable<{}> {
-        return this.http.delete(`${this.apiUrl}${id}`)
+        return this.http.delete(`${this.apiUrl}/${id}`)
     }
 
     addUser(name: string): Observable<UserInterface> {
