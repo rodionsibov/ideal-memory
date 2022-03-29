@@ -7,9 +7,9 @@ import { UserInterface } from '../user.interface';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-  @Input() users: UserInterface[] | undefined
-  @Output() removeUser = new EventEmitter<string>()
-  @Output() addUserEvent = new EventEmitter<string>()
+  @Input() users!: UserInterface[]
+  @Output() onRemoveUser = new EventEmitter<string>()
+  @Output() onAddUser = new EventEmitter<string>()
 
   errorMessage: string = ''
 
@@ -29,7 +29,7 @@ export class UserListComponent implements OnInit {
       return
     }
     this.errorMessage = ''
-    this.addUserEvent.emit(user)
+    this.onAddUser.emit(user)
   }
 
   openModal(modal: any, user: any): void {

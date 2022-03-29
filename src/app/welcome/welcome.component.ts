@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Tile } from '../tile.interface';
 import { StoreInfoService } from '../store-info.service';
@@ -13,21 +12,27 @@ import { UsersService } from '../users.service';
 export class WelcomeComponent implements OnInit {
 
   users: UserInterface[] = []
-
+  windowWidth: number = 4
   tiles: Tile[] = []
   errorMessage: string = ''
+  showSpinner: boolean = false
 
   constructor(private storeInfo: StoreInfoService, private usersService: UsersService) { }
 
   ngOnInit(): void {
+    window.addEventListener('resize', () =>{
+      this.windowWidth = window.innerWidth
+    })
+
     console.log('StoreInfo:', this.storeInfo);
     this.tiles = this.storeInfo.tiles
-
-
-
+    
+    this.showSpinner = true
     this.usersService.getUsers().subscribe((users: UserInterface[]) => {
-      console.log('UsersService:', users);
       this.users = users
+      console.log('UsersService:', users);
+      this.showSpinner = false 
+      
     })
 
     // fetch('http://localhost:3000/users')

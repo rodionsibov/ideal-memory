@@ -7,7 +7,7 @@ import { Task } from './task.interface';
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = 'http://localhost:3000/posts'
+  private apiUrl = 'http://localhost:3000/addresses'
 
   constructor(private http: HttpClient) { }
 

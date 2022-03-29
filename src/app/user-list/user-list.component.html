@@ -1,13 +1,14 @@
 <label for="box">User Name</label>
-<input #box id="box" type="text" (keyup.enter)="addUser(box.value); box.value=''" (blur)="addUser(box.value); box.value=''">
+<input #box id="box" type="text" (keyup.enter)="addUser(box.value); box.value=''"
+    (blur)="addUser(box.value); box.value=''">
 <div *ngIf="errorMessage" class="msg error">{{ errorMessage }}</div>
 <button class="btn primary" style="margin-top: 20px;" (click)="addUser(box.value)">Add User</button>
 
 <div *ngFor="let user of users" class="list-item">
     <div class="info" (click)="openModal(modal, user)" title="Click to Edit">
-        {{ user.name }} {{ user.age }}
+        {{ user.name.first }} {{ user.name.last }}
     </div>
-    <button class="btn danger" (click)="removeUser.emit(user.id)">Remove</button>
+    <button class="btn danger" (click)="onRemoveUser.emit(user.id)">Remove</button>
 
 </div>
 
@@ -19,3 +20,4 @@
         <button class="btn bg-blue" (click)="closeModal(modal, $event)">Save</button>
     </div>
 </dialog>
+
