@@ -1,13 +1,13 @@
 :host {
-    display: block;
-    padding: 2rem;
+  display: block;
+  padding: 2rem;
 }
 
 nav {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
 span {
-    opacity: 0.5;
-    font-weight: lighter;
+  opacity: 0.5;
+  font-weight: lighter;
 }

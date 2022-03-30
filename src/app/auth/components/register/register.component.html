@@ -1,36 +1,49 @@
 <div class="auth-page">
-    <div class="container page">
-        <div class="row">
-            <div class="col-md-6 mx-auto">
-                <h1 class="text-sm-center">Sign Up</h1>
-                <p class="text-sm-center">
-                    <a [routerLink]="['/login',]">Have an account?</a>
-                </p>
-                backend errors are here
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <h1 class="text-sm-center">Sign Up</h1>
+        <p class="text-sm-center">
+          <a [routerLink]="['/login']">Have an account?</a>
+        </p>
+        backend errors are here
 
-                <!-- <div *ngIf="foo$ | async as foo">
+        <!-- <div *ngIf="foo$ | async as foo">
                     {{ foo.id }}
                     {{ foo.title }}
                     {{ foo.description }}
                 </div> -->
 
-
-                <form [formGroup]="form" (ngSubmit)="onSubmit()">
-                    <fieldset>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Username" formControlName="username">
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Email" formControlName="email">
-                        </div>
-                        <div class="mb-3">
-                            <input type="password" class="form-control" placeholder="Password"
-                                formControlName="password">
-                        </div>
-                        <button class="btn btn-primary float-end">Sign Up</button>
-                    </fieldset>
-                </form>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <fieldset>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Username"
+                formControlName="username"
+              />
             </div>
-        </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Email"
+                formControlName="email"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Password"
+                formControlName="password"
+              />
+            </div>
+            <button class="btn btn-primary float-end">Sign Up</button>
+          </fieldset>
+        </form>
+      </div>
     </div>
+  </div>
 </div>
