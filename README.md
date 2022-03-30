@@ -1,4 +1,5 @@
 # MyApp
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8051859f-20e4-4a7d-8837-1ab6982abb9b/deploy-status)](https://app.netlify.com/sites/regal-travesseiro-c38a29/deploys)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
