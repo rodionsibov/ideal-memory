@@ -1,25 +1,40 @@
 <div class="container">
-    <label for="box">User Name</label>
-    <input #box id="box" type="text" (keyup.enter)="addUser(box.value); box.value=''"
-        (blur)="addUser(box.value); box.value=''">
-    <div *ngIf="errorMessage" class="msg error">{{ errorMessage }}</div>
-    <button class="btn primary" style="margin-top: 20px;" (click)="addUser(box.value)">Add User</button>
-    
-    <div *ngFor="let user of users" class="list-item">
-        <div class="info" (click)="openModal(modal, user)" title="Click to Edit">
-            {{ user.name.first }} {{ user.name.last }}
-        </div>
-        <button class="btn danger" (click)="onRemoveUser.emit(user.id)">Remove</button>
-    
+  <label for="box">User Name</label>
+  <input
+    #box
+    id="box"
+    type="text"
+    (keyup.enter)="addUser(box.value); box.value = ''"
+    (blur)="addUser(box.value); box.value = ''"
+  />
+  <div *ngIf="errorMessage" class="msg error">{{ errorMessage }}</div>
+  <button
+    class="btn primary"
+    style="margin-top: 20px"
+    (click)="addUser(box.value)"
+  >
+    Add User
+  </button>
+
+  <div *ngFor="let user of users" class="list-item">
+    <div class="info" (click)="openModal(modal, user)" title="Click to Edit">
+      {{ user.name.first }} {{ user.name.last }}
     </div>
+    <button class="btn danger" (click)="onRemoveUser.emit(user.id)">
+      Remove
+    </button>
+  </div>
 </div>
 
 <dialog #modal>
-    <h2>Edit User</h2>
-    <input type="text">
-    <div class="buttons">
-        <button class="btn bg-gray" (click)="closeModal(modal, $event)">Cancel</button>
-        <button class="btn bg-blue" (click)="closeModal(modal, $event)">Save</button>
-    </div>
+  <h2>Edit User</h2>
+  <input type="text" />
+  <div class="buttons">
+    <button class="btn bg-gray" (click)="closeModal(modal, $event)">
+      Cancel
+    </button>
+    <button class="btn bg-blue" (click)="closeModal(modal, $event)">
+      Save
+    </button>
+  </div>
 </dialog>
-

@@ -1,11 +1,11 @@
 .tasks {
-    margin: 3rem auto;
-    max-width: 400px;
-    padding: 2rem;
-    border: 2px solid indianred;
-    border-radius: 1rem;
+  margin: 3rem auto;
+  max-width: 400px;
+  padding: 2rem;
+  border: 2px solid indianred;
+  border-radius: 1rem;
 }
 
 .task {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }

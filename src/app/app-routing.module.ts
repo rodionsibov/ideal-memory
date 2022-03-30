@@ -11,32 +11,32 @@ import { WelcomeComponent } from './welcome/welcome.component';
 const routes: Routes = [
   {
     path: 'departments',
-    component: DepartmentListComponent
+    component: DepartmentListComponent,
   },
   {
     path: 'employees',
-    component: EmployeeListComponent
+    component: EmployeeListComponent,
   },
   {
     path: 'material-ui',
-    component: MaterialUiComponent
+    component: MaterialUiComponent,
   },
   {
     path: 'task-tracker',
-    component: TaskTrackerComponent
+    component: TaskTrackerComponent,
   },
   {
     path: '',
-    component: WelcomeComponent
+    component: WelcomeComponent,
   },
   {
     path: 'product/:id',
-    component: ProductComponent
+    component: ProductComponent,
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

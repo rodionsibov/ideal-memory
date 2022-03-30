@@ -24,7 +24,6 @@ import { StoreInfoService } from './store-info.service';
 import { UsersService } from './users.service';
 import { TaskService } from './task.service';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +34,7 @@ import { TaskService } from './task.service';
     DepartmentListComponent,
     EmployeeListComponent,
     MaterialUiComponent,
-    TaskTrackerComponent
+    TaskTrackerComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,9 +45,12 @@ import { TaskService } from './task.service';
     HttpClientModule,
     AuthModule,
     StoreModule.forRoot({}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }), 
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
   ],
   providers: [StoreInfoService, UsersService, TaskService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

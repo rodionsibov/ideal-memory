@@ -1,2 +1,1 @@
-export interface ArticleTypes {
-}
+export interface ArticleTypes {}

@@ -1,28 +1,34 @@
 .one-tile {
-    background: url('https://source.unsplash.com/random/800x800/?sig=1') no-repeat center center;
+  background: url("https://source.unsplash.com/random/800x800/?sig=1") no-repeat
+    center center;
 }
 .two-tile {
-    background: url('https://source.unsplash.com/random/800x800/?sig=2') no-repeat center center;
+  background: url("https://source.unsplash.com/random/800x800/?sig=2") no-repeat
+    center center;
 }
 .three-tile {
-    background: url('https://source.unsplash.com/random/800x800/?sig=3') no-repeat center center;
+  background: url("https://source.unsplash.com/random/800x800/?sig=3") no-repeat
+    center center;
 }
 .four-tile {
-    background: url('https://source.unsplash.com/random/800x800/?sig=4') no-repeat center center;
+  background: url("https://source.unsplash.com/random/800x800/?sig=4") no-repeat
+    center center;
 }
 .five-tile {
-    background: url('https://source.unsplash.com/random/800x800/?sig=5') no-repeat center center;
+  background: url("https://source.unsplash.com/random/800x800/?sig=5") no-repeat
+    center center;
 }
 .six-tile {
-    background: url('https://source.unsplash.com/random/800x800/?sig=6') no-repeat center center;
+  background: url("https://source.unsplash.com/random/800x800/?sig=6") no-repeat
+    center center;
 }
 
 .box-text {
-    font-size: 3rem;
-    font-weight: 900;
-    color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
 }
 
 .container {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }

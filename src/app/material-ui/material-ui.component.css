@@ -1,24 +1,24 @@
 :host {
-    display: block;
-    padding: 4rem 0;
+  display: block;
+  padding: 4rem 0;
 }
 
 button {
-    margin: 1rem;
+  margin: 1rem;
 }
 
 div {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 .badge div {
-    margin: 2rem;
+  margin: 2rem;
 }
 
 .navbar {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .navbar span {
-    padding-right: 1rem;
+  padding-right: 1rem;
 }

@@ -1,139 +1,144 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 :root {
-    --off-white: #fffff2;
+  --off-white: #fffff2;
 }
 
 body {
-    background-color: var(--off-white);
+  background-color: var(--off-white);
 }
 
 .list-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    background-color: white;
-    border-radius: 4px;
-    transition: 0.2s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    word-break: break-all;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 4px;
+  transition: 0.2s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  word-break: break-all;
 }
 
 .list-item:hover {
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-    transform: scale(102%);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  transform: scale(102%);
 }
 
 .info {
-    padding-right: 20px;
+  padding-right: 20px;
 }
 
 .info:hover {
-    cursor: help
+  cursor: help;
 }
 
 .btn {
-    color: white;
-    border: none;
-    padding: 10px;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: 0.2s ease;
-    cursor: pointer;
-    flex-shrink: 0;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: 0.2s ease;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 .danger {
-    background-color: tomato;
-    border: 2px solid red;
-    opacity: 0.4;
+  background-color: tomato;
+  border: 2px solid red;
+  opacity: 0.4;
 }
 
 .primary {
-    background-color: green;
-    transform: scale(120%);
-    transform-origin: left;
-    margin: 10px 0 60px;
-    display: flex;
+  background-color: green;
+  transform: scale(120%);
+  transform-origin: left;
+  margin: 10px 0 60px;
+  display: flex;
 }
 
 .bg-blue {
-    background-color: dodgerblue;
+  background-color: dodgerblue;
 }
 
 .bg-gray {
-    background-color: tomato;
+  background-color: tomato;
 }
 
 .btn:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
-
 input {
-    padding: 10px;
-    display: block;
-    border: none;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 1.5rem;
-    border: 1px solid gray;
+  padding: 10px;
+  display: block;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  border: 1px solid gray;
 }
 
 dialog {
-    max-width: 50ch;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  max-width: 50ch;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
 }
 
 dialog::backdrop {
-    background: linear-gradient(45deg, red, blue);
-    opacity: 0.5;
+  background: linear-gradient(45deg, red, blue);
+  opacity: 0.5;
 }
 
 .buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .msg {
-    margin: 10px 0 20px;
-    font-size: small;
+  margin: 10px 0 20px;
+  font-size: small;
 }
 
 .error {
-    color: tomato;
+  color: tomato;
 }
 
 label {
-    display: block;
-    margin-bottom: 4px;
-    color: white;
+  display: block;
+  margin-bottom: 4px;
+  color: white;
 }
 
 .mat-grid-tile {
-    transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .mat-grid-tile:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .spinner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-height: 100vh;
-    width: 100%;
-    display: grid;
-    place-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  place-content: center;
 }
