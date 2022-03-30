@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 import { MaterialModule } from './material-ui/material.module';
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -21,6 +23,7 @@ import { TaskTrackerComponent } from './task-tracker/task-tracker.component';
 import { StoreInfoService } from './store-info.service';
 import { UsersService } from './users.service';
 import { TaskService } from './task.service';
+
 
 @NgModule({
   declarations: [
@@ -41,9 +44,9 @@ import { TaskService } from './task.service';
     AppRoutingModule,
     MaterialModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {}),
-    AuthModule, 
-    StoreModule.forRoot([])
+    AuthModule,
+    StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }), 
   ],
   providers: [StoreInfoService, UsersService, TaskService],
   bootstrap: [AppComponent]
