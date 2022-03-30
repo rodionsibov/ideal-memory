@@ -26,11 +26,11 @@ const routes: Routes = [
     component: TaskTrackerComponent,
   },
   {
-    path: '',
+    path: 'products',
     component: WelcomeComponent,
   },
   {
-    path: 'product/:id',
+    path: 'products/:id',
     component: ProductComponent,
   },
 ];
