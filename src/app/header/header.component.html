@@ -1,35 +1,39 @@
-<div>
-  <h1>Angular app</h1>
-  <button
-    mat-button
-    [matMenuTriggerFor]="menu"
-    matTooltip="Info about the action"
-  >
-    Menu
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
-  </mat-menu>
+<div class="container">
+  <div class="row">
+    <div class="col d-flex justify-content-between align-items-center">
+      <div class="fw-bold fs-5">Angular app</div>
+      <div class="text-center">
+        <button
+          mat-button
+          [matMenuTriggerFor]="menu"
+          matTooltip="Info about the action"
+        >
+          Menu
+        </button>
+        <mat-menu #menu="matMenu">
+          <button
+            mat-menu-item
+            routerLink="departments"
+            routerLinkActive="active"
+          >
+            Departments
+          </button>
+          <button mat-menu-item [routerLink]="['employees']">Employess</button>
 
-  <button mat-button [routerLink]="['/']">Products</button>
-  <button mat-button>About</button>
-  <button mat-button>Blog</button>
-  <button mat-button>Faq</button>
-  <button mat-button>Contacts</button>
-  <button mat-button routerLink="register">Register</button>
-  <button mat-button routerLink="login">Login</button>
+          <button mat-menu-item [routerLink]="['/']">Home</button>
+          <button mat-menu-item>Contacts</button>
+        </mat-menu>
 
-  <nav>
-    <a mat-button color="primary" routerLink="material-ui">Material UI</a>
-    <a
-      mat-button
-      color="primary"
-      routerLink="departments"
-      routerLinkActive="active"
-      >Departments</a
-    >
-    <a mat-button color="primary" routerLink="employees">Employess</a>
-    <a mat-button color="accent" routerLink="task-tracker">Task Tracker</a>
-  </nav>
+        <button mat-button [routerLink]="['products']">Products</button>
+        <button mat-button routerLink="login">Login</button>
+        <button mat-button color="primary" routerLink="material-ui">
+          Material UI
+        </button>
+        <button mat-button color="accent" routerLink="task-tracker">
+          Task Tracker
+        </button>
+        <button mat-button routerLink="register">Register</button>
+      </div>
+    </div>
+  </div>
 </div>
