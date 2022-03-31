@@ -10,16 +10,16 @@ import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
   {
+    path: '',
+    component: MaterialUiComponent,
+  },
+  {
     path: 'departments',
     component: DepartmentListComponent,
   },
   {
     path: 'employees',
     component: EmployeeListComponent,
-  },
-  {
-    path: 'material-ui',
-    component: MaterialUiComponent,
   },
   {
     path: 'task-tracker',
